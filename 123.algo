@@ -1,0 +1,23 @@
+ALGORITHM checkpoint algo
+VAR
+ch:STRING;
+i,j,nbv,nbw,longch;
+const voy:="aeiyouAEOIUY";
+    
+BEGIN
+    write("donner ch");
+    read(ch);
+    nbv=0;
+    nbw=0;
+    for i from 0 to long(ch) step 1 do;
+    for j from 0 to long(voy) step 1 do;
+    IF (ch[i]=voy[j]) THEN
+        nbv=nbw+1;
+    END_IF
+    END for
+    IF (ch[i]="") THEN
+        nbw=nbw+1
+    END_IF
+END for
+write(nbv,nbw,longch);
+END
